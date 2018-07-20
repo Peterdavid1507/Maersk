@@ -5,6 +5,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using Maersk.Models;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Web.Security;
 
 namespace Maersk.Account
 {
@@ -12,6 +15,11 @@ namespace Maersk.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["id"] = "";
+            Session["email"] = "";
+            Session["role"] = "";
+            Session["status"] = "";
+
             RegisterHyperLink.NavigateUrl = "Register";
             // Enable this once you have account confirmation enabled for password reset functionality
             //ForgotPasswordHyperLink.NavigateUrl = "Forgot";
@@ -27,33 +35,81 @@ namespace Maersk.Account
         {
             if (IsValid)
             {
-                // Validate the user password
-                var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-                var signinManager = Context.GetOwinContext().GetUserManager<ApplicationSignInManager>();
-
-                // This doen't count login failures towards account lockout
-                // To enable password failures to trigger lockout, change to shouldLockout: true
-                var result = signinManager.PasswordSignIn(Email.Text, Password.Text, RememberMe.Checked, shouldLockout: false);
-
-                switch (result)
+                SqlConnection conn = new SqlConnection();
+                try
                 {
-                    case SignInStatus.Success:
-                        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
-                        break;
-                    case SignInStatus.LockedOut:
-                        Response.Redirect("/Account/Lockout");
-                        break;
-                    case SignInStatus.RequiresVerification:
-                        Response.Redirect(String.Format("/Account/TwoFactorAuthenticationSignIn?ReturnUrl={0}&RememberMe={1}", 
-                                                        Request.QueryString["ReturnUrl"],
-                                                        RememberMe.Checked),
-                                          true);
-                        break;
-                    case SignInStatus.Failure:
-                    default:
-                        FailureText.Text = "Invalid login attempt";
-                        ErrorMessage.Visible = true;
-                        break;
+                    conn.ConnectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                    conn.Open();
+
+                    SqlCommand sql = new SqlCommand("SELECT * FROM users WHERE user_email = @email AND user_password = @password", conn);
+                    sql.Parameters.Add(new SqlParameter("@email", Email.Text));
+                    sql.Parameters.Add(new SqlParameter("@password", Password.Text));
+                    SqlDataReader dr = sql.ExecuteReader();
+
+                    if (dr.Read())
+                    {
+                        var idTS = dr["user_id"].ToString();
+                        int id = int.Parse(idTS);
+                        var role = dr["role_id"].ToString();
+                        conn.Close();
+                        dr.Close();
+
+                        Session["id"] = id;
+                        Session["email"] = Email.Text;
+                        Session["role"] = role;
+                        Session["status"] = "true";
+
+
+                        // Remember Me with encryption
+                        if (this.RememberMe != null && this.RememberMe.Checked == true)
+                        {
+                            FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(1,
+                            Email.Text,
+                            DateTime.Now,
+                            DateTime.Now.AddMinutes(120),
+                            false,
+                            Email.Text,
+                            FormsAuthentication.FormsCookiePath);
+
+                            // Encrypt the ticket.
+                            string encTicket = FormsAuthentication.Encrypt(ticket);
+
+                            // Create the cookie.
+                            Response.Cookies.Add(new HttpCookie(FormsAuthentication.FormsCookieName, encTicket));
+                        }
+
+                        if (role.Equals("ADM"))
+                        {
+                            Response.Redirect("/Admin/ViewUsers");
+                        }
+                        else
+                        {
+                            Response.Redirect("~/ViewShipping");
+                        }
+                    }
+                    else
+                    {
+                        //error message
+                        Type cstype = this.GetType();
+                        ClientScriptManager cs = Page.ClientScript;
+                        if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
+                        {
+                            String cstext = "alert('Invalid User! Try again with VALID username and password');";
+                            cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
+                        }
+                    }
+                    if (!dr.IsClosed)
+                        dr.Close();
+
+                }
+                catch (Exception ex) { }
+                finally
+                {
+                    if (conn.State == System.Data.ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                    conn.Dispose();
                 }
             }
         }

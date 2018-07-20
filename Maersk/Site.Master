@@ -48,27 +48,17 @@
                     <a class="navbar-brand" runat="server">Container Management System</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Register">Register</a></li>
-                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
-                            </ul>
-                        </AnonymousTemplate>                        
-                        <LoggedInTemplate>
-                            <ul class="nav navbar-nav">
-                                <li><a runat="server" href="~/">Home</a></li>
-                                <li><a runat="server" href="~/About">About</a></li>
-                                <li><a runat="server" href="~/Contact">Contact</a></li>
-                            </ul>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
-                                <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                </li>
-                            </ul>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" id="nb_adduser" href="~/Admin/AddUser" visible="false">Add User</a></li>
+                        <li><a runat="server" id="nb_viewusers" href="~/Admin/ViewUsers" visible="false">View Users</a></li>
+                        <li><a runat="server" id="nb_addship" href="~/AddShipping" visible="false">Add Shipping</a></li>
+                        <li><a runat="server" id="nb_viewships" href="~/ViewShipping" visible="false">View Shippings</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a runat="server" id="nb_register" href="~/Account/Register">Register</a></li>
+                        <li><a runat="server" id="nb_login" href="~/Account/Login">Log in</a></li>
+                        <li><a runat="server" id="nb_logout" href="#" onserverclick="logout_serverclick" visible="false">Logout</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
