@@ -15,6 +15,7 @@ namespace Maersk.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
             Port.Items[0].Attributes.Add("disabled", "disabled");
+            Session["setEditContainer"] = 0;
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)

@@ -21,6 +21,7 @@ namespace Maersk.Account
             Session["role"] = "";
             Session["status"] = "";
             Session["setEditShipping"] = 0;
+            Session["setEditContainer"] = 0;
 
             RegisterHyperLink.NavigateUrl = "Register";
             // Enable this once you have account confirmation enabled for password reset functionality

@@ -200,7 +200,9 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AddShipping.aspx" />
     <Content Include="AddUser.aspx" />
+    <Content Include="EditContainer.aspx" />
     <Content Include="EditPortShipping.aspx" />
+    <Content Include="ViewContainers.aspx" />
     <Content Include="ViewPortShipping.aspx" />
     <Content Include="ViewUsers.aspx" />
     <Content Include="Contact.aspx" />
@@ -390,12 +392,26 @@
     <Compile Include="AddUser.aspx.designer.cs">
       <DependentUpon>AddUser.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EditContainer.aspx.cs">
+      <DependentUpon>EditContainer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditContainer.aspx.designer.cs">
+      <DependentUpon>EditContainer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EditPortShipping.aspx.cs">
       <DependentUpon>EditPortShipping.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="EditPortShipping.aspx.designer.cs">
       <DependentUpon>EditPortShipping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewContainers.aspx.cs">
+      <DependentUpon>ViewContainers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewContainers.aspx.designer.cs">
+      <DependentUpon>ViewContainers.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewPortShipping.aspx.cs">
       <DependentUpon>ViewPortShipping.aspx</DependentUpon>

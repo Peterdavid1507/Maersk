@@ -10,105 +10,78 @@
 namespace Maersk {
     
     
-    public partial class SiteMaster {
+    public partial class EditContainer {
         
         /// <summary>
-        /// nb_adduser control.
+        /// ErrorMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_adduser;
+        protected global::System.Web.UI.WebControls.Literal ErrorMessage;
         
         /// <summary>
-        /// nb_viewusers control.
+        /// lblContainerID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_viewusers;
+        protected global::System.Web.UI.WebControls.Label lblContainerID;
         
         /// <summary>
-        /// nb_addship control.
+        /// Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_addship;
+        protected global::System.Web.UI.WebControls.TextBox Name;
         
         /// <summary>
-        /// nb_viewships control.
+        /// Size control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_viewships;
+        protected global::System.Web.UI.WebControls.TextBox Size;
         
         /// <summary>
-        /// nb_viewportships control.
+        /// Price control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_viewportships;
+        protected global::System.Web.UI.WebControls.TextBox Price;
         
         /// <summary>
-        /// nb_viewcontainers control.
+        /// rbYes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_viewcontainers;
+        protected global::System.Web.UI.WebControls.RadioButton rbYes;
         
         /// <summary>
-        /// nb_register control.
+        /// rbNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_register;
+        protected global::System.Web.UI.WebControls.RadioButton rbNo;
         
         /// <summary>
-        /// nb_login control.
+        /// btnUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_login;
-        
-        /// <summary>
-        /// nb_changePW control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_changePW;
-        
-        /// <summary>
-        /// nb_logout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_logout;
-        
-        /// <summary>
-        /// MainContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Button btnUpdate;
     }
 }
