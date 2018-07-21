@@ -14,6 +14,7 @@ namespace Maersk
         protected void Page_Load(object sender, EventArgs e)
         {
             welcome.Text = Session["name"].ToString();
+            Session["setEditShipping"] = 0;
         }
     }
 }

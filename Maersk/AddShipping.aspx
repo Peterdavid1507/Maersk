@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="Arrival" CssClass="col-md-2 control-label">End Port</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="Arrival" CssClass="col-md-2 control-label">Arrival Port</asp:Label>
             <div class="col-md-10">
                 <asp:DropDownList ID="Arrival" AppendDataBoundItems="true" runat="server" CssClass="form-control" DataSourceID="dsPort" DataTextField="port_name" DataValueField="port_id">
                     <asp:ListItem Value="" Selected="True" Text="Select Arrival Port..."></asp:ListItem>
@@ -69,7 +69,7 @@
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="txtPrice" CssClass="col-md-2 control-label">Price(RM)</asp:Label>
             <div class="col-md-10">
-                <asp:TextBox runat="server" ID="txtPrice" Text="" CssClass="form-control" />
+                <asp:TextBox runat="server" ReadOnly="true" ID="txtPrice" Text="0.00" CssClass="form-control" />
             </div>
         </div>
         <div class="form-group">

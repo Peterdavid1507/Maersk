@@ -40,11 +40,28 @@ namespace Maersk.Account
             //fail
             if (success == 0)
             {
+                //Error message
+                Type cstype = this.GetType();
+                ClientScriptManager cs = Page.ClientScript;
+                if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
+                {
+                    String cstext = "alert('Something went wrong. Please contact Administrator for assistance');";
+                    cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
+                }
+                Response.Redirect("/Account/Register.aspx", false);
             }
             //success
             else
             {
-                Response.Redirect("/Account/Login", false);
+                //Successful message
+                Type cstype = this.GetType();
+                ClientScriptManager cs = Page.ClientScript;
+                if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
+                {
+                    String cstext = "alert('Successfully Registered.');";
+                    cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
+                }
+                Response.Redirect("/Account/Login.aspx", false);
             }
         }
     }

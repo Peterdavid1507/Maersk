@@ -17,6 +17,7 @@ namespace Maersk
             Departure.Items[0].Attributes.Add("disabled", "disabled");
             Arrival.Items[0].Attributes.Add("disabled", "disabled");
             Container.Items[0].Attributes.Add("disabled", "disabled");
+            Session["setEditShipping"] = 0;
         }
 
         private void UpdatePrice()
@@ -57,7 +58,7 @@ namespace Maersk
                         ClientScriptManager cs = Page.ClientScript;
                         if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
                         {
-                            String cstext = "alert('Something went wrong. Please contact adminstrator for assistance.');";
+                            String cstext = "alert('Something went wrong. Please contact Administrator for assistance');";
                             cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
                         }
                     }
@@ -130,7 +131,7 @@ namespace Maersk
                             ClientScriptManager cs = Page.ClientScript;
                             if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
                             {
-                                String cstext = "alert('Something went wrong. Please contact adminstrator for assistance.');";
+                                String cstext = "alert('Something went wrong. Please contact Administrator for assistance');";
                                 cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
                             }
                         }
@@ -205,13 +206,28 @@ namespace Maersk
             //fail
             if (success == 0)
             {
+                //Successful message
+                Type cstype = this.GetType();
+                ClientScriptManager cs = Page.ClientScript;
+                if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
+                {
+                    String cstext = "alert('Something went wrong. Please contact Administrator for assistance');";
+                    cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
+                }
             }
             //success
             else
             {
-                Response.Redirect("/ViewShipping.aspx?", false);
+                //Successful message
+                Type cstype = this.GetType();
+                ClientScriptManager cs = Page.ClientScript;
+                if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
+                {
+                    String cstext = "alert('Successfully Added.');";
+                    cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
+                }              
             }
-
+            Response.Redirect("/ViewShipping.aspx?", false);
         }
     }
 }
