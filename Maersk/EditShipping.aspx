@@ -13,7 +13,7 @@
     </h6>
     <hr />
 
-    <div class="form-horizontal">
+    <div class="form-horizontal" id ="CUS">
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Departure" CssClass="col-md-2 control-label">Departure Port</asp:Label>

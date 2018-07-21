@@ -45,8 +45,7 @@ namespace Maersk
                 // port staffs
                 else if (role.Equals("POR"))
                 {
-                    nb_addship.Visible = true;
-                    nb_viewships.Visible = true;
+                    nb_viewportships.Visible = true;
                     nb_login.Visible = false;
                     nb_logout.Visible = true;
                     nb_register.Visible = false;
