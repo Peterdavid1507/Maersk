@@ -6,6 +6,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using Maersk.Models;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
 
 namespace Maersk.Account
 {
@@ -19,28 +22,46 @@ namespace Maersk.Account
 
         protected void Reset_Click(object sender, EventArgs e)
         {
-            string code = IdentityHelper.GetCodeFromRequest(Request);
-            if (code != null)
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+
+            string sql = "UPDATE users SET user_password = @password WHERE user_id = @id";
+            SqlCommand sqlcmd = new SqlCommand(sql, conn);
+            sqlcmd.Parameters.Add("@password", SqlDbType.VarChar);
+            sqlcmd.Parameters["@password"].Value = Password.Text;
+            sqlcmd.Parameters.Add("@id", SqlDbType.VarChar);
+            sqlcmd.Parameters["@id"].Value = int.Parse(Session["id"].ToString());
+
+            conn.Open();
+            int success = sqlcmd.ExecuteNonQuery();
+            conn.Close();
+
+            //fail
+            if (success == 0)
             {
-                var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-
-                var user = manager.FindByName(Email.Text);
-                if (user == null)
+                //Error message
+                Type cstype = this.GetType();
+                ClientScriptManager cs = Page.ClientScript;
+                if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
                 {
-                    ErrorMessage.Text = "No user found";
-                    return;
+                    String cstext = "alert('Something went wrong. Please contact Administrator for assistance');";
+                    cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
                 }
-                var result = manager.ResetPassword(user.Id, code, Password.Text);
-                if (result.Succeeded)
-                {
-                    Response.Redirect("~/Account/ResetPasswordConfirmation");
-                    return;
-                }
-                ErrorMessage.Text = result.Errors.FirstOrDefault();
-                return;
             }
+            //success
+            else
+            {
+                //Successful message
+                Type cstype = this.GetType();
+                ClientScriptManager cs = Page.ClientScript;
+                if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
+                {
+                    String cstext = "alert('Successfully Registered.');";
+                    cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
+                }
 
-            ErrorMessage.Text = "An error has occurred";
+            }
+            Response.Redirect("~/Account/ResetPasswordConfirmation");
         }
     }
 }

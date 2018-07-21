@@ -84,7 +84,7 @@ namespace Maersk.Account
 
                         if (role.Equals("ADM"))
                         {
-                            Response.Redirect("/Admin/ViewUsers");
+                            Response.Redirect("/ViewUsers");
                         }
                         else
                         {

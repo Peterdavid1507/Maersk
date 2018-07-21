@@ -40,6 +40,7 @@ namespace Maersk
                     nb_login.Visible = false;
                     nb_logout.Visible = true;
                     nb_register.Visible = false;
+                    nb_changePW.Visible = true;
                 }
                 // port staffs
                 else if (role.Equals("POR"))
@@ -49,6 +50,7 @@ namespace Maersk
                     nb_login.Visible = false;
                     nb_logout.Visible = true;
                     nb_register.Visible = false;
+                    nb_changePW.Visible = true;
                 }
                 // customers / company
                 else
@@ -58,6 +60,7 @@ namespace Maersk
                     nb_login.Visible = false;
                     nb_logout.Visible = true;
                     nb_register.Visible = false;
+                    nb_changePW.Visible = true;
                 }
             }
         }
@@ -69,12 +72,7 @@ namespace Maersk
         
         protected void logout_serverclick (object sender, EventArgs e)
         {
-            Session["id"] = "";
-            Session["name"] = "";
-            Session["email"] = "";
-            Session["role"] = "";
-            Session["status"] = "false";
-            Response.Redirect("/Account/Login", false);
+            
         }
     }
 

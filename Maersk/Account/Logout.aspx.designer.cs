@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Maersk.Admin {
+namespace Maersk.Account {
     
     
-    public partial class ViewUsers {
+    public partial class Logout {
     }
 }
