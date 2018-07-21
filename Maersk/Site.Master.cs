@@ -70,6 +70,7 @@ namespace Maersk
         protected void logout_serverclick (object sender, EventArgs e)
         {
             Session["id"] = "";
+            Session["name"] = "";
             Session["email"] = "";
             Session["role"] = "";
             Session["status"] = "false";

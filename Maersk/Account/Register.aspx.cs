@@ -20,24 +20,24 @@ namespace Maersk.Account
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
-            string createCustomerUser = "INSERT INTO users (user_name, user_contact, user_email, user_password, role_id) VALUES (@name,@contact,@email,@password,@roleID);";
-            SqlCommand sql = new SqlCommand(createCustomerUser, conn);
-            sql.Parameters.Add("@name", SqlDbType.VarChar);
-            sql.Parameters["@name"].Value = CompanyName.Text;
-            sql.Parameters.Add("@contact", SqlDbType.VarChar);
-            sql.Parameters["@contact"].Value = Contact.Text;
-            sql.Parameters.Add("@email", SqlDbType.VarChar);
-            sql.Parameters["@email"].Value = Email.Text;
-            sql.Parameters.Add("@password", SqlDbType.VarChar);
-            sql.Parameters["@password"].Value = Password.Text;
-            sql.Parameters.Add("@roleID", SqlDbType.VarChar);
-            sql.Parameters["@roleID"].Value = "CUS";
+            string sql = "INSERT INTO users (user_name, user_contact, user_email, user_password, role_id) VALUES (@name,@contact,@email,@password,@roleID);";
+            SqlCommand sqlcmd = new SqlCommand(sql, conn);
+            sqlcmd.Parameters.Add("@name", SqlDbType.VarChar);
+            sqlcmd.Parameters["@name"].Value = CompanyName.Text;
+            sqlcmd.Parameters.Add("@contact", SqlDbType.VarChar);
+            sqlcmd.Parameters["@contact"].Value = Contact.Text;
+            sqlcmd.Parameters.Add("@email", SqlDbType.VarChar);
+            sqlcmd.Parameters["@email"].Value = Email.Text;
+            sqlcmd.Parameters.Add("@password", SqlDbType.VarChar);
+            sqlcmd.Parameters["@password"].Value = Password.Text;
+            sqlcmd.Parameters.Add("@roleID", SqlDbType.VarChar);
+            sqlcmd.Parameters["@roleID"].Value = "CUS";
 
             conn.Open();
-            int success = sql.ExecuteNonQuery();
+            int success = sqlcmd.ExecuteNonQuery();
             conn.Close();
 
-            //not success
+            //fail
             if (success == 0)
             {
             }

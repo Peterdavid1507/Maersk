@@ -206,6 +206,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="EditShipping.aspx" />
     <Content Include="ViewShipping.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
@@ -403,6 +404,13 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditShipping.aspx.cs">
+      <DependentUpon>EditShipping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditShipping.aspx.designer.cs">
+      <DependentUpon>EditShipping.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewShipping.aspx.cs">
       <DependentUpon>ViewShipping.aspx</DependentUpon>

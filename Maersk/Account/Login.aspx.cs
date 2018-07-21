@@ -16,6 +16,7 @@ namespace Maersk.Account
         protected void Page_Load(object sender, EventArgs e)
         {
             Session["id"] = "";
+            Session["name"] = "";
             Session["email"] = "";
             Session["role"] = "";
             Session["status"] = "";
@@ -51,10 +52,12 @@ namespace Maersk.Account
                         var idTS = dr["user_id"].ToString();
                         int id = int.Parse(idTS);
                         var role = dr["role_id"].ToString();
+                        var name = dr["user_name"].ToString();
                         conn.Close();
                         dr.Close();
 
                         Session["id"] = id;
+                        Session["name"] = name;
                         Session["email"] = Email.Text;
                         Session["role"] = role;
                         Session["status"] = "true";
