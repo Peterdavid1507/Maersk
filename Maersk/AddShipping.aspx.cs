@@ -23,9 +23,7 @@ namespace Maersk
         private void UpdatePrice()
         {
             double currentPrice = 0.00;
-
             
-
             if (!Container.SelectedIndex.Equals(0))
             {
                 SqlConnection conn = new SqlConnection();

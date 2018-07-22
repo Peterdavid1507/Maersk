@@ -20,30 +20,9 @@ namespace Maersk
             lblShippingID.Text = Request["id"];
             lblStatus.Text = Request["status"];
 
-            var port = Request["port"];
-
-            if (port.Equals("1"))
+            if (Request["status"].Equals("Delivered") || Request["status"].Equals("Shipping"))
             {
-                // to disable Rejected dropdown list item
-                var rejected = Status.Items.FindByText("Rejected");
-                rejected.Attributes.CssStyle.Add("display", "none");
-
-            }
-            else if (port.Equals("2"))
-            {
-                // to disable Pending Approval dropdown list item
-                var pending = Status.Items.FindByText("Pending Approval");
-                pending.Attributes.CssStyle.Add("display", "none");
-                // to disable Approved dropdown list item
-                var approved = Status.Items.FindByText("Approved");
-                approved.Attributes.CssStyle.Add("display", "none");
-                // to disable Shipping dropdown list item
-                var shipping = Status.Items.FindByText("Shipping");
-                shipping.Attributes.CssStyle.Add("display", "none");
-            }
-            else
-            {
-                Response.Redirect("/ViewPortShipping.aspx", false);
+                Response.Redirect("/ViewPortShipping", false);
             }
         }
 

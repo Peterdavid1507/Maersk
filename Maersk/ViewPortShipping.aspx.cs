@@ -11,7 +11,34 @@ namespace Maersk
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            welcome.Text = Session["name"].ToString();
+        }
 
+        private void changeSQL()
+        {
+            String sql = "SELECT * FROM Shipping_Details " +
+                "WHERE(shipping_departure_port = (SELECT port_id FROM users WHERE user_id = '" + Session["id"].ToString() + "') " +
+                "OR shipping_arrival_port = (SELECT port_id FROM users WHERE user_id = '" + Session["id"].ToString() + "')) " +
+                "AND shipping_id = '" + Search.Text + "'; ";
+
+
+            //String sql = "SELECT * " +
+            //    "FROM Shipping_Details" +
+            //    "WHERE (shipping_departure_port = (SELECT port_id FROM users WHERE user_id = '" + Session["id"].ToString() + "') " +
+            //    "OR shipping_arrival_port = (SELECT port_id FROM users WHERE user_id = '" + Session["id"].ToString() + "')) " +
+            //    "AND shipping_id = '" + Search.Text + "'";
+
+            dsCheckShipping.SelectCommand = sql;
+        }
+
+        protected void Search_TextChanged(object sender, EventArgs e)
+        {
+            changeSQL();
+        }
+
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/ViewPortShipping", false);
         }
     }
 }

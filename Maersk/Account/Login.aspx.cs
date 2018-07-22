@@ -22,6 +22,11 @@ namespace Maersk.Account
             Session["status"] = "";
             Session["setEditShipping"] = 0;
             Session["setEditContainer"] = 0;
+            Session["shipping"] = "select shipping_id FROM shipping s " +
+                "JOIN container c on s.container_id = c.container_id " +
+                "JOIN port p1 on shipping_departure_port = p1.port_id" +
+                "JOIN port p2 on shipping_arrival_port = p2.port_id " +
+                "WHERE s.shipping_customer = @id";
 
             RegisterHyperLink.NavigateUrl = "Register";
             // Enable this once you have account confirmation enabled for password reset functionality

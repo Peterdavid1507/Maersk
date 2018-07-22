@@ -8,7 +8,7 @@
     </p>
 
     <h3>Shipping ID: <asp:Label runat="server" Font-Bold="true" ForeColor="#ae0000" ID="lblShippingID"></asp:Label></h3>
-    <h3>Cuurent Status: <asp:Label runat="server" Font-Bold="true" ForeColor="#ae0000" ID="lblStatus"></asp:Label></h3>
+    <h3>Curent Status: <asp:Label runat="server" Font-Bold="true" ForeColor="#ae0000" ID="lblStatus"></asp:Label></h3>
     <hr />
 
     <div class="form-horizontal" id ="CUS">
@@ -18,10 +18,7 @@
             <div class="col-md-10">
                 <asp:DropDownList ID="Status" AppendDataBoundItems="true" runat="server" CssClass="form-control">
                     <asp:ListItem Value="" Selected="True" Text="Select Status..."></asp:ListItem>
-                    <asp:ListItem Value="Pending Approval" Selected="false" Text="Pending Approval"></asp:ListItem>
                     <asp:ListItem Value="Approved" Selected="false" Text="Approved"></asp:ListItem>
-                    <asp:ListItem Value="Shipping" Selected="false" Text="Shipping"></asp:ListItem>
-                    <asp:ListItem Value="Delivered" Selected="false" Text="Delivered"></asp:ListItem>
                     <asp:ListItem Value="Rejected" Selected="false" Text="Rejected"></asp:ListItem>
                 </asp:DropDownList>
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Status" 
