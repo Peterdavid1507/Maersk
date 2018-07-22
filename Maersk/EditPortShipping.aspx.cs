@@ -24,9 +24,6 @@ namespace Maersk
 
             if (port.Equals("1"))
             {
-                // to disable Delivered dropdown list item
-                var delivered = Status.Items.FindByText("Delivered");
-                delivered.Attributes.CssStyle.Add("display", "none");
                 // to disable Rejected dropdown list item
                 var rejected = Status.Items.FindByText("Rejected");
                 rejected.Attributes.CssStyle.Add("display", "none");
