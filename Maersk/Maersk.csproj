@@ -199,11 +199,13 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AddContainer.aspx" />
+    <Content Include="AddPort.aspx" />
     <Content Include="AddShipping.aspx" />
     <Content Include="AddUser.aspx" />
     <Content Include="EditContainer.aspx" />
     <Content Include="EditPortShipping.aspx" />
     <Content Include="ViewContainers.aspx" />
+    <Content Include="ViewPorts.aspx" />
     <Content Include="ViewPortShipping.aspx" />
     <Content Include="ViewUsers.aspx" />
     <Content Include="Contact.aspx" />
@@ -386,6 +388,13 @@
     <Compile Include="AddContainer.aspx.designer.cs">
       <DependentUpon>AddContainer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AddPort.aspx.cs">
+      <DependentUpon>AddPort.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddPort.aspx.designer.cs">
+      <DependentUpon>AddPort.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddShipping.aspx.cs">
       <DependentUpon>AddShipping.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -420,6 +429,13 @@
     </Compile>
     <Compile Include="ViewContainers.aspx.designer.cs">
       <DependentUpon>ViewContainers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPorts.aspx.cs">
+      <DependentUpon>ViewPorts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPorts.aspx.designer.cs">
+      <DependentUpon>ViewPorts.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewPortShipping.aspx.cs">
       <DependentUpon>ViewPortShipping.aspx</DependentUpon>

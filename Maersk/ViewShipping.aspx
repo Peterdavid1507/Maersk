@@ -1,9 +1,10 @@
-﻿<%@ Page Title="View Shipping" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewShipping.aspx.cs" Inherits="Maersk.ViewShipping" Async="true" %>
+﻿<%@ Page Title="View Shipping Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewShipping.aspx.cs" Inherits="Maersk.ViewShipping" Async="true" %>
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <%--<h2><%: Title %>.</h2>--%>
     <h3>Welcome <asp:Label runat="server" Font-Bold="true" ForeColor="#ae0000" ID="welcome"></asp:Label></h3>
+    <h2><%: Title %></h2>
     <asp:GridView ID="gvViewShipping" CssClass="table table-striped table-bordered table-condensed" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="shipping_id" DataSourceID="dsCheckShipping" >
         <Columns>
             <asp:BoundField DataField="shipping_id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="shipping_id" />

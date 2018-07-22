@@ -3,6 +3,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h3>Welcome <asp:Label runat="server" Font-Bold="true" ForeColor="#ae0000" ID="welcome"></asp:Label></h3>
+    <h2><%: Title %></h2>
     <asp:GridView ID="gvUser" CssClass="table table-striped table-bordered table-condensed" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="user_id" DataSourceID="dsUser" >
         <Columns>
             <asp:BoundField DataField="user_id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="user_id" />
