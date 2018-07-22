@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Edit Container Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditContainer.aspx.cs" Inherits="Maersk.EditContainer" Async="true" %>
+﻿<%@ Page Title="Register New Container Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddContainer.aspx.cs" Inherits="Maersk.AddContainer" Async="true" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>
@@ -6,12 +6,6 @@
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
     </p>
-
-    <h3>Container ID: <asp:Label runat="server" Font-Bold="true" ForeColor="#ae0000" ID="lblContainerID"></asp:Label></h3>
-    <h6>
-        (<asp:Label runat="server" Font-Bold="true" ForeColor="#ae0000">Click "View Containers" and click "Edit" on the desired container information</asp:Label>, if field is not populated with respective information)
-    </h6>
-    <hr />
 
     <div class="form-horizontal">
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
@@ -39,17 +33,10 @@
                     CssClass="text-danger"  Display="Dynamic" ErrorMessage="The price field is required." />
             </div>
         </div>
-        <div class="form-group">
-            <asp:Label runat="server" CssClass="col-md-2 control-label">Stop Using?</asp:Label>
-            <div class="col-md-10">
-                <asp:RadioButton id="rbYes" Text="Yes" CssClass="radio-inline" GroupName="rgStop" runat="server" /><br />
-                <asp:RadioButton id="rbNo" Text="No" CssClass="radio-inline" GroupName="rgStop" runat="server" />
-            </div>
-        </div>
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <asp:Button id="btnUpdate" runat="server" Text="Update" CssClass="btn btn-default" OnClick="btnUpdate_Click"   />
+            <asp:Button id="btnAdd" runat="server" Text="Add" CssClass="btn btn-default" OnClick="btnAdd_Click" />
         </div>
     </div>
 </asp:Content>

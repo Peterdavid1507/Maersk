@@ -58,6 +58,15 @@ namespace Maersk {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_viewportships;
         
         /// <summary>
+        /// nb_addcontainer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_addcontainer;
+        
+        /// <summary>
         /// nb_viewcontainers control.
         /// </summary>
         /// <remarks>

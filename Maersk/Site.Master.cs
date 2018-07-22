@@ -41,6 +41,7 @@ namespace Maersk
                     nb_logout.Visible = true;
                     nb_register.Visible = false;
                     nb_changePW.Visible = true;
+                    nb_addcontainer.Visible = true;
                     nb_viewcontainers.Visible = true;
                 }
                 // port staffs

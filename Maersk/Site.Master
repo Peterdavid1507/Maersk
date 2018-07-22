@@ -54,6 +54,7 @@
                         <li><a runat="server" id="nb_addship" href="~/AddShipping" visible="false">Add Shipping</a></li>
                         <li><a runat="server" id="nb_viewships" href="~/ViewShipping" visible="false">View Shippings</a></li>
                         <li><a runat="server" id="nb_viewportships" href="~/ViewPortShipping" visible="false">View Shippings</a></li>
+                        <li><a runat="server" id="nb_addcontainer" href="~/AddContainer" visible="false">Add Container</a></li>
                         <li><a runat="server" id="nb_viewcontainers" href="~/ViewContainers" visible="false">View Containers</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
