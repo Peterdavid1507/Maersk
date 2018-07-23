@@ -22,13 +22,13 @@ namespace Maersk {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_addship;
         
         /// <summary>
-        /// nb_viewships control.
+        /// nb_viewship control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_viewships;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_viewship;
         
         /// <summary>
         /// nb_viewportshipsDeparture control.

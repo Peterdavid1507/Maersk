@@ -66,10 +66,10 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" id="nb_addship" href="~/AddShipping" visible="false">Add Shipping</a></li>
-                        <li><a runat="server" id="nb_viewships" href="~/ViewShipping" visible="false">View Shippings</a></li>
-                        <li><a runat="server" id="nb_viewportshipsDeparture" href="~/ViewPortShippingDeparture" visible="false">View Departure Shippings</a></li>
-                        <li><a runat="server" id="nb_viewportshipsArrival" href="~/ViewPortShippingArrival" visible="false">View Arrival Shippings</a></li>
+                        <li><a runat="server" id="nb_addship" href="~/AddShipping" visible="false">Add Shipments</a></li>
+                        <li><a runat="server" id="nb_viewship" href="~/ViewShipping" visible="false">View Shipments</a></li>
+                        <li><a runat="server" id="nb_viewportshipsDeparture" href="~/ViewPortShippingDeparture" visible="false">View Departure Shipments</a></li>
+                        <li><a runat="server" id="nb_viewportshipsArrival" href="~/ViewPortShippingArrival" visible="false">View Arrival Shipments</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a runat="server" id="nb_register" href="~/Account/Register">Register</a></li>

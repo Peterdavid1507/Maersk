@@ -46,7 +46,7 @@ namespace Maersk
                 else
                 {
                     nb_addship.Visible = true;
-                    nb_viewships.Visible = true;
+                    nb_viewship.Visible = true;
                     nb_login.Visible = false;
                     nb_logout.Visible = true;
                     nb_register.Visible = false;

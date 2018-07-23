@@ -45,7 +45,7 @@ namespace Maersk.Account
                 ClientScriptManager cs = Page.ClientScript;
                 if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
                 {
-                    String cstext = "alert('Something went wrong. Please contact Administrator for assistance');";
+                    String cstext = "alert('Something went wrong. Please contact Administrator for assistance');window.open('/Account/Login.aspx','_self');";
                     cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
                 }
             }
@@ -57,12 +57,11 @@ namespace Maersk.Account
                 ClientScriptManager cs = Page.ClientScript;
                 if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
                 {
-                    String cstext = "alert('Successfully Registered.');";
+                    String cstext = "alert('Successfully Registered.');window.open('/Account/Login.aspx','_self');";
                     cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
                 }
                 
             }
-            Response.Redirect("/Account/Login.aspx", false);
         }
     }
 }

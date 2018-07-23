@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Edit Shipping Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditPortShipping.aspx.cs" Inherits="Maersk.EditPortShipping" Async="true" %>
+﻿<%@ Page Title="Change Shipping Status" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditPortShipping.aspx.cs" Inherits="Maersk.EditPortShipping" Async="true" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>
@@ -31,4 +31,5 @@
             <asp:Button id="btnUpdate" runat="server" Text="Update Status" CssClass="btn btn-default" OnClick="btnUpdate_Click"  />
         </div>
     </div>
+    <hr />
 </asp:Content>

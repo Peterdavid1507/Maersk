@@ -209,23 +209,23 @@ namespace Maersk
                 ClientScriptManager cs = Page.ClientScript;
                 if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
                 {
-                    String cstext = "alert('Something went wrong. Please contact Administrator for assistance');";
+                    String cstext = "alert('Something went wrong. Please contact Administrator for assistance');window.open('/ViewShipping.aspx','_self');";
                     cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
                 }
             }
             //success
             else
             {
+
                 //Successful message
                 Type cstype = this.GetType();
                 ClientScriptManager cs = Page.ClientScript;
                 if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
                 {
-                    String cstext = "alert('Successfully Added.');";
+                    String cstext = "alert('Successfully Added.');window.open('/ViewShipping.aspx','_self');";
                     cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
                 }              
             }
-            Response.Redirect("/ViewShipping.aspx?", false);
         }
     }
 }

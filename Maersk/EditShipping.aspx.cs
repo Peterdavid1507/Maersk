@@ -284,7 +284,7 @@ namespace Maersk
                 ClientScriptManager cs = Page.ClientScript;
                 if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
                 {
-                    String cstext = "alert('Something went wrong. Please contact Administrator for assistance');";
+                    String cstext = "alert('Something went wrong. Please contact Administrator for assistance');window.open('/ViewShipping.aspx','_self');";
                     cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
                 }
             }
@@ -296,7 +296,7 @@ namespace Maersk
                 ClientScriptManager cs = Page.ClientScript;
                 if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
                 {
-                    String cstext = "alert('Successfully Updated.');";
+                    String cstext = "alert('Successfully Updated.');window.open('/ViewShipping.aspx','_self');";
                     cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
                 }
             }

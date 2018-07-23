@@ -1,4 +1,4 @@
-﻿<%@ Page Title="View Departure Ports Shipping Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewPortShippingDeparture.aspx.cs" Inherits="Maersk.ViewPortShippingDeparture" Async="true" %>
+﻿<%@ Page Title="View Departure Port Shipping Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewPortShippingDeparture.aspx.cs" Inherits="Maersk.ViewPortShippingDeparture" Async="true" %>
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">

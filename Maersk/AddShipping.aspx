@@ -61,7 +61,7 @@
                 <asp:DropDownList ID="Container" AppendDataBoundItems="true" AutoPostBack="True" runat="server" CssClass="form-control" DataSourceID="dsContainer" DataTextField="list" DataValueField="container_id" OnSelectedIndexChanged="Container_SelectedIndexChanged">
                     <asp:ListItem Value="" Selected="True" Text="Select Conatiner..."></asp:ListItem>
                 </asp:DropDownList>
-                <asp:SqlDataSource ID="dsContainer" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT *, CONCAT(container_name, ' - ', container_size, ' TEU', ' - RM', container_price) AS list, CONCAT('RM',container_price) AS price FROM container WHERE container_isStopped is null;"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="dsContainer" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT *, CONCAT(container_name, ' - ', container_size, ' TEU', ' - RM', container_price) AS list, CONCAT('RM',container_price) AS price FROM container;"></asp:SqlDataSource>
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Container"
                     CssClass="text-danger"  Display="Dynamic" ErrorMessage="The container field is required." />
             </div>

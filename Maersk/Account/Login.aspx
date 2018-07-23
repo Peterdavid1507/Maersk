@@ -4,7 +4,6 @@
     <h2><%: Title %></h2>
 
                 <div class="form-horizontal">
-                    <h4>Use a local account to log in.</h4>
                     <hr />
                     <asp:PlaceHolder runat="server" ID="ErrorMessage" Visible="false">
                         <p class="text-danger">
