@@ -68,7 +68,8 @@
                     <ul class="nav navbar-nav">
                         <li><a runat="server" id="nb_addship" href="~/AddShipping" visible="false">Add Shipping</a></li>
                         <li><a runat="server" id="nb_viewships" href="~/ViewShipping" visible="false">View Shippings</a></li>
-                        <li><a runat="server" id="nb_viewportships" href="~/ViewPortShipping" visible="false">View Shippings</a></li>
+                        <li><a runat="server" id="nb_viewportshipsDeparture" href="~/ViewPortShippingDeparture" visible="false">View Departure Shippings</a></li>
+                        <li><a runat="server" id="nb_viewportshipsArrival" href="~/ViewPortShippingArrival" visible="false">View Arrival Shippings</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a runat="server" id="nb_register" href="~/Account/Register">Register</a></li>

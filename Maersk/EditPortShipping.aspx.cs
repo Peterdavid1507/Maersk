@@ -22,7 +22,7 @@ namespace Maersk
 
             if (Request["status"].Equals("Delivered") || Request["status"].Equals("Shipping"))
             {
-                Response.Redirect("/ViewPortShipping", false);
+                Response.Redirect("/ViewPortShippingDeparture", false);
             }
         }
 
@@ -65,7 +65,7 @@ namespace Maersk
                     cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
                 }
             }
-            Response.Redirect("/ViewPortShipping.aspx?", false);
+            Response.Redirect("/ViewPortShippingDeparture.aspx?", false);
         }
     }
 }

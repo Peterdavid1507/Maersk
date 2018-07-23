@@ -88,13 +88,9 @@ namespace Maersk.Account
                             Response.Cookies.Add(new HttpCookie(FormsAuthentication.FormsCookieName, encTicket));
                         }
 
-                        if (role.Equals("ADM"))
+                        if (role.Equals("POR"))
                         {
-                            Response.Redirect("/ViewUsers");
-                        }
-                        else if (role.Equals("POR"))
-                        {
-                            Response.Redirect("~/ViewPortShipping");
+                            Response.Redirect("~/ViewPortShippingDeparture");
                         }
                         else
                         {

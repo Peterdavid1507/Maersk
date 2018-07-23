@@ -24,7 +24,8 @@ namespace Maersk
             String sql = "SELECT shipping_id, departure, arrival, shipping_date, shipping_status, shipping_weight, " +
                 "shipping_cost, shipping_remarks, container_name AS ContainerName, container_size AS ContainerSize " +
                 "FROM Shipping_Details " +
-                "WHERE (shipping_customer = '" + Session["id"].ToString() + "' AND shipping_id = '" + Search.Text + "')";
+                "WHERE (shipping_customer = '" + Session["id"].ToString() + "' AND shipping_id = '" + Search.Text + "') " +
+                "ORDER BY shipping_id DESC";
 
             dsCheckShipping.SelectCommand = sql;
         }

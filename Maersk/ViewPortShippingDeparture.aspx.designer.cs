@@ -10,7 +10,7 @@
 namespace Maersk {
     
     
-    public partial class ViewPortShipping {
+    public partial class ViewPortShippingDeparture {
         
         /// <summary>
         /// welcome control.

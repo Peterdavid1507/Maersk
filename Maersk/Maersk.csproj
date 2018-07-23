@@ -198,16 +198,10 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="AddContainer.aspx" />
-    <Content Include="AddPort.aspx" />
     <Content Include="AddShipping.aspx" />
-    <Content Include="AddUser.aspx" />
-    <Content Include="EditContainer.aspx" />
     <Content Include="EditPortShipping.aspx" />
-    <Content Include="ViewContainers.aspx" />
-    <Content Include="ViewPorts.aspx" />
-    <Content Include="ViewPortShipping.aspx" />
-    <Content Include="ViewUsers.aspx" />
+    <Content Include="ViewPortShippingArrival.aspx" />
+    <Content Include="ViewPortShippingDeparture.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -381,40 +375,12 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddContainer.aspx.cs">
-      <DependentUpon>AddContainer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AddContainer.aspx.designer.cs">
-      <DependentUpon>AddContainer.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AddPort.aspx.cs">
-      <DependentUpon>AddPort.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AddPort.aspx.designer.cs">
-      <DependentUpon>AddPort.aspx</DependentUpon>
-    </Compile>
     <Compile Include="AddShipping.aspx.cs">
       <DependentUpon>AddShipping.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AddShipping.aspx.designer.cs">
       <DependentUpon>AddShipping.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AddUser.aspx.cs">
-      <DependentUpon>AddUser.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AddUser.aspx.designer.cs">
-      <DependentUpon>AddUser.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditContainer.aspx.cs">
-      <DependentUpon>EditContainer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditContainer.aspx.designer.cs">
-      <DependentUpon>EditContainer.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditPortShipping.aspx.cs">
       <DependentUpon>EditPortShipping.aspx</DependentUpon>
@@ -423,33 +389,19 @@
     <Compile Include="EditPortShipping.aspx.designer.cs">
       <DependentUpon>EditPortShipping.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewContainers.aspx.cs">
-      <DependentUpon>ViewContainers.aspx</DependentUpon>
+    <Compile Include="ViewPortShippingArrival.aspx.cs">
+      <DependentUpon>ViewPortShippingArrival.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewContainers.aspx.designer.cs">
-      <DependentUpon>ViewContainers.aspx</DependentUpon>
+    <Compile Include="ViewPortShippingArrival.aspx.designer.cs">
+      <DependentUpon>ViewPortShippingArrival.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewPorts.aspx.cs">
-      <DependentUpon>ViewPorts.aspx</DependentUpon>
+    <Compile Include="ViewPortShippingDeparture.aspx.cs">
+      <DependentUpon>ViewPortShippingDeparture.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewPorts.aspx.designer.cs">
-      <DependentUpon>ViewPorts.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewPortShipping.aspx.cs">
-      <DependentUpon>ViewPortShipping.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewPortShipping.aspx.designer.cs">
-      <DependentUpon>ViewPortShipping.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewUsers.aspx.cs">
-      <DependentUpon>ViewUsers.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewUsers.aspx.designer.cs">
-      <DependentUpon>ViewUsers.aspx</DependentUpon>
+    <Compile Include="ViewPortShippingDeparture.aspx.designer.cs">
+      <DependentUpon>ViewPortShippingDeparture.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">

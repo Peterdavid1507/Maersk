@@ -28,7 +28,7 @@
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <asp:Button id="btnUpdate" runat="server" Text="Update" CssClass="btn btn-default" OnClick="btnUpdate_Click"  />
+            <asp:Button id="btnUpdate" runat="server" Text="Update Status" CssClass="btn btn-default" OnClick="btnUpdate_Click"  />
         </div>
     </div>
 </asp:Content>

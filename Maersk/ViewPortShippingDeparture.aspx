@@ -1,4 +1,4 @@
-﻿<%@ Page Title="View Ports Shipping Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewPortShipping.aspx.cs" Inherits="Maersk.ViewPortShipping" Async="true" %>
+﻿<%@ Page Title="View Departure Ports Shipping Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewPortShippingDeparture.aspx.cs" Inherits="Maersk.ViewPortShippingDeparture" Async="true" %>
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
@@ -28,7 +28,7 @@
             <asp:BoundField DataField="container_size" HeaderText="Size (TEU)" SortExpression="container_size" />
             <asp:TemplateField>
                 <ItemTemplate>
-                    <asp:HyperLink ID="hlEdit" runat="server" Text="Edit"
+                    <asp:HyperLink ID="hlEdit" runat="server" Text="Change Status"
                         NavigateUrl='<%# "EditPortShipping.aspx?id=" + Eval("shipping_id") + "&status=" + Eval("shipping_status") %>' /> 
                 </ItemTemplate>
             </asp:TemplateField>
@@ -38,7 +38,7 @@
         SelectCommand="SELECT *
                         FROM Shipping_Details
                         WHERE shipping_departure_port = (SELECT port_id FROM users WHERE user_id = @id)
-                        OR shipping_arrival_port = (SELECT port_id FROM users WHERE user_id = @id)" >
+                        ORDER BY shipping_id DESC" >
         <SelectParameters>
             <asp:SessionParameter DefaultValue="" Name="id" SessionField="id" />
         </SelectParameters>
