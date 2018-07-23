@@ -20,9 +20,16 @@ namespace Maersk
 
             int set = int.Parse(Session["setEditShipping"].ToString());
 
-            if (set.Equals(0))
+            if (Request["status"].Equals("Shipping") || Request["status"].Equals("Delivered"))
             {
-                FirstTimeLoading();
+                Response.Redirect("/ViewShipping", false);
+            }
+            else
+            {
+                if (set.Equals(0))
+                {
+                    FirstTimeLoading();
+                }
             }
         }
 

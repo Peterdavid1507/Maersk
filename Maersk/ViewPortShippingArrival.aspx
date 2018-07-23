@@ -24,6 +24,7 @@
             <asp:BoundField DataField="shipping_remarks" HeaderText="Remarks" SortExpression="shipping_remarks" />
             <asp:BoundField DataField="container_name" HeaderText="Container" SortExpression="container_name" />
             <asp:BoundField DataField="container_size" HeaderText="Size (TEU)" SortExpression="container_size" />
+            <asp:BoundField DataField="user_name" HeaderText="Customer Name" SortExpression="user_name" />
         </Columns>
     </asp:GridView>
     <asp:SqlDataSource ID="dsCheckShipping" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" 
