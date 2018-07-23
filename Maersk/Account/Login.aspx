@@ -1,13 +1,8 @@
 ﻿<%@ Page Title="Log in" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Maersk.Account.Login" Async="true" %>
 
-<%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
-
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <h2><%: Title %></h2>
 
-    <div class="row">
-        <div class="col-md-8">
-            <section id="loginForm">
                 <div class="form-horizontal">
                     <h4>Use a local account to log in.</h4>
                     <hr />
@@ -34,32 +29,17 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
-                            <div class="checkbox">
-                                <asp:CheckBox runat="server" ID="RememberMe" />
-                                <asp:Label runat="server" AssociatedControlID="RememberMe" Display="Dynamic">Remember me?</asp:Label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
                             <asp:Button runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-default" Display="Dynamic"/>
                             <asp:SqlDataSource ID="dsLogin" runat="server"></asp:SqlDataSource>
+                            &nbsp&nbsp
+                            <asp:CheckBox runat="server" ID="RememberMe" />
+                                <asp:Label runat="server" AssociatedControlID="RememberMe" Display="Dynamic">Remember me?</asp:Label>
+                            <br /><br />
+                            <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled" Display="Dynamic">Register as a new user</asp:HyperLink>
                         </div>
                     </div>
                 </div>
                 <p>
-                    <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled" Display="Dynamic">Register as a new user</asp:HyperLink>
-                </p>
-                <p>
                     <%--<asp:HyperLink runat="server" ID="ForgotPasswordHyperLink" ViewStateMode="Disabled">Forgot your password?</asp:HyperLink>--%>
                 </p>
-            </section>
-        </div>
-
-        <div class="col-md-4">
-            <section id="socialLoginForm">
-                <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
-            </section>
-        </div>
-    </div>
 </asp:Content>

@@ -49,15 +49,6 @@ namespace Maersk.Account {
         protected global::System.Web.UI.WebControls.TextBox Password;
         
         /// <summary>
-        /// RememberMe control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox RememberMe;
-        
-        /// <summary>
         /// dsLogin control.
         /// </summary>
         /// <remarks>
@@ -67,6 +58,15 @@ namespace Maersk.Account {
         protected global::System.Web.UI.WebControls.SqlDataSource dsLogin;
         
         /// <summary>
+        /// RememberMe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox RememberMe;
+        
+        /// <summary>
         /// RegisterHyperLink control.
         /// </summary>
         /// <remarks>
@@ -74,14 +74,5 @@ namespace Maersk.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink RegisterHyperLink;
-        
-        /// <summary>
-        /// OpenAuthLogin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Maersk.Account.OpenAuthProviders OpenAuthLogin;
     }
 }
