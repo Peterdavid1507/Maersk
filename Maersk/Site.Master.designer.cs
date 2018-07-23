@@ -13,24 +13,6 @@ namespace Maersk {
     public partial class SiteMaster {
         
         /// <summary>
-        /// nb_adduser control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_adduser;
-        
-        /// <summary>
-        /// nb_viewusers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_viewusers;
-        
-        /// <summary>
         /// nb_addship control.
         /// </summary>
         /// <remarks>
@@ -56,42 +38,6 @@ namespace Maersk {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_viewportships;
-        
-        /// <summary>
-        /// nb_addcontainer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_addcontainer;
-        
-        /// <summary>
-        /// nb_viewcontainers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_viewcontainers;
-        
-        /// <summary>
-        /// nb_addport control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_addport;
-        
-        /// <summary>
-        /// nb_viewports control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_viewports;
         
         /// <summary>
         /// nb_register control.

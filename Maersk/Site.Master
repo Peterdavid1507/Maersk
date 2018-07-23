@@ -66,15 +66,9 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" id="nb_adduser" href="~/AddUser" visible="false">Add User</a></li>
-                        <li><a runat="server" id="nb_viewusers" href="~/ViewUsers" visible="false">View Users</a></li>
                         <li><a runat="server" id="nb_addship" href="~/AddShipping" visible="false">Add Shipping</a></li>
                         <li><a runat="server" id="nb_viewships" href="~/ViewShipping" visible="false">View Shippings</a></li>
                         <li><a runat="server" id="nb_viewportships" href="~/ViewPortShipping" visible="false">View Shippings</a></li>
-                        <li><a runat="server" id="nb_addcontainer" href="~/AddContainer" visible="false">Add Container</a></li>
-                        <li><a runat="server" id="nb_viewcontainers" href="~/ViewContainers" visible="false">View Containers</a></li>
-                        <li><a runat="server" id="nb_addport" href="~/AddPort" visible="false">Add Port</a></li>
-                        <li><a runat="server" id="nb_viewports" href="~/ViewPorts" visible="false">View Ports</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a runat="server" id="nb_register" href="~/Account/Register">Register</a></li>

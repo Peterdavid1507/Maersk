@@ -32,22 +32,8 @@ namespace Maersk
             if (status.Equals("true"))
             {
                 var role = Session["role"];
-                // administrators
-                if (role.Equals("ADM"))
-                {
-                    nb_adduser.Visible = true;
-                    nb_viewusers.Visible = true;
-                    nb_login.Visible = false;
-                    nb_logout.Visible = true;
-                    nb_register.Visible = false;
-                    nb_changePW.Visible = true;
-                    nb_addcontainer.Visible = true;
-                    nb_viewcontainers.Visible = true;
-                    nb_addport.Visible = true;
-                    nb_viewports.Visible = true;
-                }
                 // port staffs
-                else if (role.Equals("POR"))
+                if (role.Equals("POR"))
                 {
                     nb_viewportships.Visible = true;
                     nb_login.Visible = false;
