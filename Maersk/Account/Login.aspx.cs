@@ -91,6 +91,10 @@ namespace Maersk.Account
                         {
                             Response.Redirect("~/ViewPortShippingDeparture");
                         }
+                        else if (role.Equals("ADM"))
+                        {
+                            Response.Redirect("~/ViewContainers");
+                        }
                         else
                         {
                             Response.Redirect("~/ViewShipping");

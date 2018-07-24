@@ -40,7 +40,15 @@ namespace Maersk
                     nb_login.Visible = false;
                     nb_logout.Visible = true;
                     nb_register.Visible = false;
-                    nb_changePW.Visible = true;
+                }
+                // administrator
+                else if (role.Equals("ADM"))
+                {
+                    nb_addcontainer.Visible = true;
+                    nb_viewcontainer.Visible = true;
+                    nb_login.Visible = false;
+                    nb_logout.Visible = true;
+                    nb_register.Visible = false;
                 }
                 // customers / company
                 else
@@ -50,7 +58,6 @@ namespace Maersk
                     nb_login.Visible = false;
                     nb_logout.Visible = true;
                     nb_register.Visible = false;
-                    nb_changePW.Visible = true;
                 }
             }
         }

@@ -49,6 +49,24 @@ namespace Maersk {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_viewportshipsArrival;
         
         /// <summary>
+        /// nb_addcontainer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_addcontainer;
+        
+        /// <summary>
+        /// nb_viewcontainer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_viewcontainer;
+        
+        /// <summary>
         /// nb_register control.
         /// </summary>
         /// <remarks>
@@ -65,15 +83,6 @@ namespace Maersk {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_login;
-        
-        /// <summary>
-        /// nb_changePW control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor nb_changePW;
         
         /// <summary>
         /// nb_logout control.

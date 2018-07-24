@@ -184,10 +184,10 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Logout.aspx" />
     <Content Include="Account\Register.aspx" />
-    <Content Include="Account\ResetPassword.aspx" />
-    <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="AddContainer.aspx" />
     <Content Include="AddShipping.aspx" />
     <Content Include="EditPortShipping.aspx" />
+    <Content Include="ViewContainers.aspx" />
     <Content Include="ViewPortShippingArrival.aspx" />
     <Content Include="ViewPortShippingDeparture.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -270,19 +270,12 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\ResetPassword.aspx.cs">
-      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    <Compile Include="AddContainer.aspx.cs">
+      <DependentUpon>AddContainer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\ResetPassword.aspx.designer.cs">
-      <DependentUpon>ResetPassword.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
-      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
-      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    <Compile Include="AddContainer.aspx.designer.cs">
+      <DependentUpon>AddContainer.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddShipping.aspx.cs">
       <DependentUpon>AddShipping.aspx</DependentUpon>
@@ -297,6 +290,13 @@
     </Compile>
     <Compile Include="EditPortShipping.aspx.designer.cs">
       <DependentUpon>EditPortShipping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewContainers.aspx.cs">
+      <DependentUpon>ViewContainers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewContainers.aspx.designer.cs">
+      <DependentUpon>ViewContainers.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewPortShippingArrival.aspx.cs">
       <DependentUpon>ViewPortShippingArrival.aspx</DependentUpon>

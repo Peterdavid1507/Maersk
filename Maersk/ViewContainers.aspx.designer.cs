@@ -7,36 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Maersk.Account {
+namespace Maersk {
     
     
-    public partial class ResetPassword {
+    public partial class ViewContainers {
         
         /// <summary>
-        /// ErrorMessage control.
+        /// welcome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ErrorMessage;
+        protected global::System.Web.UI.WebControls.Label welcome;
         
         /// <summary>
-        /// Password control.
+        /// gvViewContainer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Password;
+        protected global::System.Web.UI.WebControls.GridView gvViewContainer;
         
         /// <summary>
-        /// ConfirmPassword control.
+        /// dsContainer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ConfirmPassword;
+        protected global::System.Web.UI.WebControls.SqlDataSource dsContainer;
     }
 }

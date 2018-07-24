@@ -66,15 +66,16 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" id="nb_addship" href="~/AddShipping" visible="false">Add Shipments</a></li>
+                        <li><a runat="server" id="nb_addship" href="~/AddShipping" visible="false">Add Shipment</a></li>
                         <li><a runat="server" id="nb_viewship" href="~/ViewShipping" visible="false">View Shipments</a></li>
                         <li><a runat="server" id="nb_viewportshipsDeparture" href="~/ViewPortShippingDeparture" visible="false">View Departure Shipments</a></li>
                         <li><a runat="server" id="nb_viewportshipsArrival" href="~/ViewPortShippingArrival" visible="false">View Arrival Shipments</a></li>
+                        <li><a runat="server" id="nb_addcontainer" href="~/AddContainer" visible="false">Add Container</a></li>
+                        <li><a runat="server" id="nb_viewcontainer" href="~/ViewContainer" visible="false">View Containers</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a runat="server" id="nb_register" href="~/Account/Register">Register</a></li>
                         <li><a runat="server" id="nb_login" href="~/Account/Login">Log in</a></li>
-                        <li><a runat="server" id="nb_changePW" href="~/Account/ResetPassword" visible="false">Change Password</a></li>
                         <li><a runat="server" id="nb_logout" href="~/Account/Logout" visible="false">Logout</a></li>
                     </ul>
                 </div>
